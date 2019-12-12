@@ -1,0 +1,52 @@
+ortal.netzer
+312416845
+ortal glatt
+
+
+=============================
+=  README for ex4:   =
+=============================
+
+
+==================
+=  Description:  =
+==================
+In this exercise, we built a program that running the
+"hangman" game. The program including a few functions that
+built one on another.
+
+The files and the functions in ex4 are:
+
+hangman.py:
+1. update_word_pattern - This function get a word, the current pattern and
+a letter. If the letter is in the word, the function return a new pattern
+including the letter.
+2. main - This function start a game. While the player want to keep playing,
+new game will start.
+This function uses the function "run_single_game".
+3. run_single_game - This function run a single hangman game.
+This function uses the function "the_game" and "end_game".
+4. the_game - This function check if the player want to guess a letter or to
+ask for a hint. If the player guessed a letter, the function check if it is a
+valid letter. If he want a hint, it gives him one.
+This function uses the functions "good_letter", "filter_words_list" and
+"choose_letter".
+5. good_letter - This function check if the letter is in the word. if not, the
+function add the letter to the wrong guess list.
+6. end_game - When the games ends, this function tell the player if he won or
+lose and what was the word.
+7. filter_words_list - This function filter the words list, and return a new
+list of all the words that this pattern and wrong guess list can feet them.
+This function uses the functions "same_right_letters" and "same_wrong_letters".
+8. same_right_letters - This function get a word and a pattern, and return True
+if this pattern can feet the word.
+9. same_wrong_letters - This function get a word and wrong guess list, and
+return True if the wrong guess list can feet the word.
+10. choose_letter - This function get a list of words and a pattern. and return
+the most frequent letter in the words list that doesn't appear in the pattern.
+
+check_update_word_pattern.py:
+11. check_update_word_pattern - This function check the function
+"update_word_pattern. It is checking 4 different cases, if in all the cases the
+function gave the right output, the function will return True and print a
+success message.
